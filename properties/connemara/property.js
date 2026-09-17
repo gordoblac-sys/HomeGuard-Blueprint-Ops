@@ -63,3 +63,12 @@ window.HOMEGUARD_PROPERTIES.connemara = {
     floorPlanStatus: 'U.S. government historic-structure documentation; use official source and attribution in project notes'
   }
 };
+
+// The browser can block the external HSR PDF inside an iframe. Load a local
+// in-game floor-plan presentation that uses the same official report as its source.
+if (!document.getElementById('homeGuardLocalPlanLoader')) {
+  const s = document.createElement('script');
+  s.id = 'homeGuardLocalPlanLoader';
+  s.src = 'real-plan-local.js';
+  document.body.appendChild(s);
+}
