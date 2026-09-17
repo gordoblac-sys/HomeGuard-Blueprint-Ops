@@ -1,0 +1,230 @@
+/* Real-property mission layer */
+
+.blueprint.real-property-mode{
+  position:relative;
+  display:block;
+  min-height:0;
+  height:auto;
+  aspect-ratio:auto;
+  padding:14px;
+  overflow:visible;
+  background:#07111e;
+}
+
+.real-plan-head{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+  padding:12px 13px;
+  border:1px solid rgba(85,215,255,.24);
+  border-radius:12px;
+  background:rgba(5,18,31,.76);
+}
+
+.real-plan-head strong{
+  display:block;
+  color:#e9f8ff;
+  font-size:13px;
+}
+
+.real-plan-head span{
+  display:block;
+  margin-top:4px;
+  color:#86aabd;
+  font-size:10px;
+  line-height:1.45;
+}
+
+.real-plan-head a{
+  display:inline-flex;
+  align-items:center;
+  min-height:38px;
+  padding:0 12px;
+  border-radius:10px;
+  border:1px solid rgba(85,215,255,.45);
+  color:#dff7ff;
+  text-decoration:none;
+  background:rgba(7,37,57,.76);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.05em;
+}
+
+.real-plan-frame{
+  position:relative;
+  width:100%;
+  height:620px;
+  border:1px solid rgba(85,215,255,.28);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.real-plan-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+  background:#fff;
+}
+
+.real-room-heading{
+  margin:14px 0 8px;
+  color:#8cb2c5;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.real-zone-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:8px;
+}
+
+.blueprint.real-property-mode .real-zone-grid .zone{
+  position:static !important;
+  inset:auto !important;
+  width:auto !important;
+  height:auto !important;
+  min-height:62px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:11px;
+  border:1px solid rgba(105,240,174,.32);
+  background:linear-gradient(180deg,rgba(12,50,40,.74),rgba(5,27,24,.86));
+  color:#e9fff4;
+  opacity:1;
+  transform:none !important;
+}
+
+.blueprint.real-property-mode .real-zone-grid .zone:hover{
+  border-color:rgba(105,240,174,.68);
+  background:linear-gradient(180deg,rgba(18,70,54,.84),rgba(6,35,29,.92));
+}
+
+.blueprint.real-property-mode .real-zone-grid .zone span{
+  position:static;
+  transform:none;
+  text-align:left;
+  font-size:11px;
+  font-weight:900;
+}
+
+.blueprint.real-property-mode .real-zone-grid .zone small{
+  display:block;
+  margin-top:3px;
+  color:#8fb7a7;
+  font-size:9px;
+  font-weight:600;
+}
+
+.blueprint.real-property-mode .zone-count{
+  position:static;
+  flex:0 0 auto;
+}
+
+.real-property-note{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);
+  color:#839eac;
+  background:rgba(4,14,24,.62);
+  font-size:10px;
+  line-height:1.45;
+}
+
+#realProperty360Surface{
+  position:absolute;
+  inset:0;
+  z-index:60;
+  background:#02060b;
+}
+
+#realProperty360Toolbar{
+  position:absolute;
+  top:12px;
+  right:12px;
+  z-index:80;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  justify-content:flex-end;
+  pointer-events:none;
+}
+
+#realProperty360Toolbar button,
+#realProperty360Toolbar span{
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 10px;
+  border-radius:10px;
+  backdrop-filter:blur(8px);
+}
+
+#realProperty360Toolbar span{
+  background:rgba(3,14,24,.78);
+  border:1px solid rgba(85,215,255,.34);
+  color:#e5f8ff;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+#realProperty360Toolbar button{
+  pointer-events:auto;
+  border:1px solid rgba(105,240,174,.5);
+  background:rgba(6,42,33,.9);
+  color:#eafff2;
+  font-size:9px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.real-property-hotspot{
+  width:54px !important;
+  min-height:48px !important;
+  margin-left:-27px !important;
+  margin-top:-24px !important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:5px 7px;
+  border-radius:12px;
+  border:2px solid #69f0ae;
+  background:rgba(4,14,24,.92);
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+  color:#fff;
+  cursor:pointer;
+  text-align:center;
+}
+
+.real-property-hotspot b{
+  font-size:18px;
+  line-height:1;
+}
+
+.real-property-hotspot small{
+  display:block;
+  margin-top:3px;
+  max-width:78px;
+  font-size:8px;
+  line-height:1.05;
+  color:#e5fff0;
+  white-space:nowrap;
+}
+
+@media(max-width:800px){
+  .real-plan-frame{height:480px}
+  #realProperty360Toolbar{left:10px;right:10px}
+  #realProperty360Toolbar span{width:100%;justify-content:center}
+}
