@@ -1,0 +1,54 @@
+/* HomeGuard HD graphics layer */
+:root{--hd-cyan:#55d7ff;--hd-green:#69f0ae;--hd-panel:#07121f;--hd-line:rgba(85,215,255,.28)}
+body{background:radial-gradient(circle at 50% -10%,rgba(55,215,255,.12),transparent 34%),linear-gradient(180deg,#030813,#07111d 45%,#02060d)}
+.panel,.blueprint-card,.room-view-shell{box-shadow:0 20px 55px rgba(0,0,0,.38),inset 0 0 0 1px rgba(255,255,255,.018)}
+.blueprint{box-shadow:0 0 34px rgba(55,215,255,.12);background:#06111e}
+.blueprint>img{filter:contrast(1.05) saturate(1.08)}
+.risk.camera{background:#69f0ae;box-shadow:0 0 8px #69f0ae}
+
+/* zones aligned to the new house-02 property plan */
+.front-yard{left:3.8%;top:7.8%;width:18.7%;height:29%}
+.driveway{left:23.8%;top:6%;width:13.5%;height:34%}
+.left-yard{left:3.8%;top:39%;width:15%;height:45%}
+.right-yard{left:84.6%;top:10%;width:10.8%;height:70%}
+.backyard{left:23%;top:84%;width:60%;height:9.5%}
+.patio{left:51.8%;top:72%;width:11.5%;height:9%}
+.front-entry{left:38.7%;top:8.5%;width:12.8%;height:18%}
+.living{left:64.3%;top:8.5%;width:18.8%;height:18%}
+.kitchen{left:38.7%;top:27.5%;width:12.8%;height:25%}
+.hall{left:51.5%;top:27.5%;width:12.7%;height:25%}
+.back-entry{left:64.4%;top:48%;width:10.2%;height:10%}
+.bath{left:64.4%;top:53%;width:10.2%;height:16%}
+.laundry{left:38.7%;top:53%;width:12.8%;height:14%}
+.stairs{left:51.5%;top:53%;width:12.7%;height:27%}
+.utility{left:64.4%;top:69%;width:10.2%;height:12%}
+.bedroom{left:74.7%;top:53%;width:8.2%;height:27%}
+
+/* Full-screen photographic-style scene surface */
+.room-scene{position:relative;min-height:650px;background:#07121f;overflow:hidden;border-color:rgba(85,215,255,.42);box-shadow:0 20px 55px rgba(0,0,0,.35),inset 0 0 30px rgba(0,0,0,.18)}
+.scene-image{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;user-select:none;pointer-events:none}
+.scene-ceiling,.scene-wall-left,.scene-wall-main,.scene-floor,.scene-furniture{display:none!important}
+.mounted-devices{position:absolute;inset:0;z-index:6}
+.scene-crosshair{z-index:8}
+.scene-label{z-index:9;backdrop-filter:blur(9px)}
+.mounted-device{z-index:7;background:rgba(5,14,24,.88);border:1px solid rgba(105,240,174,.58);box-shadow:0 8px 18px rgba(0,0,0,.35),0 0 14px rgba(105,240,174,.12)}
+
+/* Equipment catalog */
+.catalog-wrap{margin-top:14px;border:1px solid #173e59;border-radius:12px;background:#081725;overflow:hidden}
+.catalog-wrap summary{cursor:pointer;padding:12px 13px;color:#dff7ff;font-size:12px;font-weight:800;letter-spacing:.05em}
+.catalog-grid{padding:0 12px 12px;display:grid;gap:4px;max-height:430px;overflow:auto}
+.catalog-item{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.catalog-item:last-child{border-bottom:0}
+.catalog-item strong{font-size:11px;line-height:1.3}
+.catalog-item .price{color:#69f0ae;font-weight:800;font-size:11px}
+.catalog-item .meta{grid-column:1/-1;color:#7997aa;font-size:9px;line-height:1.3}
+
+/* Video area */
+.scenario-video{width:100%;aspect-ratio:16/9;background:#000;border:1px solid #245a79;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.video-guide{margin-top:14px;border:1px solid #173e59;border-radius:12px;background:#081725;padding:11px 12px;color:#8eaabc;font-size:11px}
+.video-guide summary{cursor:pointer;color:#dff7ff;font-weight:800}
+.video-guide ul{padding-left:18px;line-height:1.55}
+.video-guide code{color:#69f0ae;font-size:10px}
+.video-placeholder{padding:10px 11px;border-radius:10px;background:#081725;border:1px solid #173e59;line-height:1.45}
+
+@media(max-width:900px){.catalog-grid{max-height:none}.room-scene{min-height:480px}}
