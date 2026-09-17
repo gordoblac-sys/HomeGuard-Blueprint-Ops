@@ -82,11 +82,8 @@ function applyPhotoRealScene(zoneName){
   if(label) label.textContent = `${zoneName.toUpperCase()} • PHOTO-REAL VIEW`;
 }
 
-// Replace the global artwork function used by the HD room-opening wrapper.
 window.applyRoomArtwork = applyPhotoRealScene;
 
-// Also apply after blueprint clicks so photo mode wins even if the browser kept
-// a reference to the earlier artwork function.
 const photoBlueprint = document.getElementById('blueprint');
 if(photoBlueprint){
   photoBlueprint.addEventListener('click', event => {
@@ -96,7 +93,6 @@ if(photoBlueprint){
   });
 }
 
-// Add a visible photo-real mode badge inside the room viewer.
 const photoViewer = document.querySelector('.room-view-header > div');
 if(photoViewer && !document.getElementById('photoRealModeBadge')){
   const badge = document.createElement('div');
@@ -104,27 +100,6 @@ if(photoViewer && !document.getElementById('photoRealModeBadge')){
   badge.textContent = 'PHOTO-REAL INSTALLATION MODE';
   badge.style.cssText = 'display:inline-block;margin-top:7px;padding:5px 9px;border-radius:999px;border:1px solid rgba(105,240,174,.42);background:rgba(11,47,38,.55);color:#69f0ae;font-size:9px;font-weight:900;letter-spacing:.12em';
   photoViewer.appendChild(badge);
-}
-
-// Fix 360 drag input. The first panorama version deliberately stopped several
-// mouse / pointer events from bubbling so the old flat-image installer would not
-// also react. Pannellum needs those drag events to reach its document handlers,
-// so allow drag-related events to bubble while continuing to block normal click
-// bubbling through the panorama surface.
-if(!window.__homeGuard360InputFix){
-  window.__homeGuard360InputFix = true;
-  const nativeStopPropagation = Event.prototype.stopPropagation;
-  const dragEventTypes = new Set([
-    'mousedown','mouseup','mousemove',
-    'pointerdown','pointerup','pointermove'
-  ]);
-
-  Event.prototype.stopPropagation = function(){
-    const target = this.target;
-    const insidePanorama = target && target.closest && target.closest('#panoramaSurface');
-    if(insidePanorama && dragEventTypes.has(this.type)) return;
-    return nativeStopPropagation.call(this);
-  };
 }
 
 // Load the true 360 installation layer after photo-real mode.
