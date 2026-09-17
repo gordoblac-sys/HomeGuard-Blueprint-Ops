@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Connemara Main House first-floor gameplay trace</title>
+  <desc id="desc">Interactive gameplay trace based on the National Park Service 2004 measured first-floor plan, report page 173. Verified 360 capture points are marked for the front porch, living room, and kitchen. Geometry is simplified for gameplay and the official measured report remains the source of truth.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#d7dde2" stroke-width="1"/>
+    </pattern>
+    <style>
+      .wall{fill:none;stroke:#17222b;stroke-width:12;stroke-linejoin:miter}
+      .inner{fill:none;stroke:#27343e;stroke-width:6}
+      .thin{fill:none;stroke:#6d7a84;stroke-width:2}
+      .room{font:700 22px Arial,sans-serif;fill:#17222b;letter-spacing:.04em}
+      .sub{font:14px Arial,sans-serif;fill:#5b6872}
+      .cap{font:700 14px Arial,sans-serif;fill:#0a563d}
+      .small{font:12px Arial,sans-serif;fill:#68747d}
+      .marker{fill:#16a36f;stroke:#fff;stroke-width:5}
+      .markerRing{fill:none;stroke:#16a36f;stroke-width:3}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f7f7f2"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".45"/>
+
+  <text x="55" y="48" class="room">CONNEMARA MAIN HOUSE - FIRST FLOOR</text>
+  <text x="55" y="73" class="sub">Interactive trace from NPS 2004 measured plan • official report page 173 • not to scale</text>
+
+  <!-- Main house footprint, simplified from the same real property -->
+  <path class="wall" d="M140 155 H1010 V610 H140 Z"/>
+  <path class="wall" d="M245 610 V690 H905 V610"/>
+
+  <!-- Interior room divisions -->
+  <path class="inner" d="M470 155 V610"/>
+  <path class="inner" d="M720 155 V610"/>
+  <path class="inner" d="M140 375 H1010"/>
+  <path class="inner" d="M470 470 H720"/>
+  <path class="inner" d="M835 375 V610"/>
+
+  <!-- Door openings / swing hints -->
+  <path class="thin" d="M302 610 v-42 a42 42 0 0 1 42 42"/>
+  <path class="thin" d="M470 260 h42 a42 42 0 0 0-42 42"/>
+  <path class="thin" d="M720 250 h-42 a42 42 0 0 1 42 42"/>
+  <path class="thin" d="M720 480 h-42 a42 42 0 0 1 42 42"/>
+  <path class="thin" d="M835 470 h-42 a42 42 0 0 1 42 42"/>
+
+  <!-- Windows -->
+  <path class="thin" d="M185 155 h90 M315 155 h90 M155 255 v80 M155 430 v95 M950 205 v90 M950 430 v95 M300 610 h110 M770 610 h110" stroke-width="8"/>
+
+  <!-- Labels -->
+  <text x="265" y="255" class="room">LIVING ROOM</text>
+  <text x="205" y="285" class="sub">Verified NPS 360 capture</text>
+
+  <text x="535" y="255" class="room">CENTER HALL</text>
+  <text x="545" y="285" class="sub">Main circulation</text>
+
+  <text x="792" y="255" class="room">OFFICE / FRONT ROOM</text>
+  <text x="810" y="285" class="sub">Historic front range</text>
+
+  <text x="260" y="500" class="room">DINING / REAR ROOM</text>
+  <text x="290" y="530" class="sub">Historic rear range</text>
+
+  <text x="535" y="430" class="room">STAIR HALL</text>
+  <text x="530" y="455" class="sub">Room 115 area</text>
+
+  <text x="530" y="550" class="room">FARM OFFICE</text>
+  <text x="542" y="577" class="sub">Adjacent to stair hall</text>
+
+  <text x="855" y="485" class="room">KITCHEN</text>
+  <text x="858" y="515" class="sub">Room 117 • verified 360</text>
+
+  <text x="476" y="655" class="room">FRONT PORCH</text>
+  <text x="455" y="680" class="sub">Verified same-house 360 capture</text>
+
+  <!-- 360 capture markers -->
+  <circle cx="308" cy="320" r="26" class="markerRing"/><circle cx="308" cy="320" r="13" class="marker"/>
+  <text x="338" y="326" class="cap">360</text>
+
+  <circle cx="903" cy="555" r="26" class="markerRing"/><circle cx="903" cy="555" r="13" class="marker"/>
+  <text x="933" y="561" class="cap">360</text>
+
+  <circle cx="575" cy="650" r="26" class="markerRing"/><circle cx="575" cy="650" r="13" class="marker"/>
+  <text x="605" y="656" class="cap">360</text>
+
+  <text x="55" y="728" class="small">Source of truth: Connemara Main House Historic Structure Report, 2004 measured plan. This local trace removes the broken external PDF embed while keeping the real property / panorama relationship.</text>
+</svg>
