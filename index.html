@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HomeGuard: Blueprint Ops</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">TACTICAL HOME SAFETY SIM</p>
+      <h1>HOMEGUARD: BLUEPRINT OPS</h1>
+      <p class="tagline">Design the system. Protect the home. Survive the scenario.</p>
+    </div>
+    <div class="budget-box"><span>BUDGET</span><strong id="budget">$1,200</strong></div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel">
+      <p class="eyebrow">MISSION 01</p>
+      <h2>Williams Residence</h2>
+      <div class="brief">
+        <p><b>Residents:</b> 2 adults, 1 senior</p>
+        <p><b>Risks:</b> intrusion, fire, water, fall, CO</p>
+        <p><b>Objective:</b> protect the home without exceeding the budget.</p>
+      </div>
+      <h3>DEVICE LOADOUT</h3>
+      <div id="deviceShop" class="device-shop"></div>
+    </aside>
+
+    <section class="game-column">
+      <div class="stats">
+        <div><span>COVERAGE</span><strong id="coverage">0%</strong></div>
+        <div><span>DEVICES</span><strong id="deviceCount">0</strong></div>
+        <div><span>SELECTED</span><strong id="selected">None</strong></div>
+      </div>
+
+      <section class="blueprint-card">
+        <div class="section-head">
+          <div><p class="eyebrow">PLANNING PHASE</p><h2>Interactive Blueprint</h2></div>
+          <div class="actions">
+            <button id="resetBtn" class="secondary">RESET</button>
+            <button id="simulateBtn" class="primary">RUN SCENARIO</button>
+          </div>
+        </div>
+
+        <div id="blueprint" class="blueprint">
+          <img src="assets/blueprints/house-01.svg" alt="House blueprint" />
+          <button class="room front" data-room="Front Entry">Front Entry<div class="chips"></div></button>
+          <button class="room living" data-room="Living Room">Living Room<div class="chips"></div></button>
+          <button class="room kitchen" data-room="Kitchen">Kitchen<div class="chips"></div></button>
+          <button class="room hall" data-room="Hallway">Hallway<div class="chips"></div></button>
+          <button class="room bath" data-room="Bathroom">Bathroom<div class="chips"></div></button>
+          <button class="room bedroom" data-room="Bedroom">Bedroom<div class="chips"></div></button>
+          <button class="room stairs" data-room="Stairs">Stairs<div class="chips"></div></button>
+          <button class="room laundry" data-room="Laundry">Laundry<div class="chips"></div></button>
+          <button class="room basement" data-room="Basement">Basement<div class="chips"></div></button>
+          <button class="room back" data-room="Back Entry">Back Entry<div class="chips"></div></button>
+        </div>
+      </section>
+    </section>
+
+    <aside class="panel scenario-panel">
+      <p class="eyebrow">LIVE EVENT</p>
+      <h2>Scenario Feed</h2>
+      <video id="scenarioVideo" controls playsinline></video>
+      <div id="videoPlaceholder" class="video-placeholder">Scenario footage will appear here.</div>
+      <div class="result">
+        <h3 id="resultTitle">SYSTEM NOT TESTED</h3>
+        <p id="resultText">Build your system and run the scenario.</p>
+        <div class="result-grid">
+          <div><span>EVENT</span><strong id="incident">—</strong></div>
+          <div><span>LOCATION</span><strong id="location">—</strong></div>
+          <div><span>DETECTED</span><strong id="detected">—</strong></div>
+          <div><span>DAMAGE</span><strong id="damage">—</strong></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
