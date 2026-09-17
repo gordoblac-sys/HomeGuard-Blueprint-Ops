@@ -1,1 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none"><defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#1d5678" stroke-width="1" opacity=".35"/></pattern></defs><rect width="1200" height="800" fill="#03101d"/><rect width="1200" height="800" fill="url(#grid)"/><rect x="35" y="45" width="1130" height="700" rx="14" stroke="#9eeaff" stroke-width="8"/><line x1="300" y1="45" x2="300" y2="745" stroke="#9eeaff" stroke-width="7"/><line x1="520" y1="405" x2="520" y2="745" stroke="#9eeaff" stroke-width="7"/><line x1="760" y1="295" x2="760" y2="745" stroke="#9eeaff" stroke-width="7"/><line x1="300" y1="295" x2="1165" y2="295" stroke="#9eeaff" stroke-width="7"/><line x1="35" y1="405" x2="760" y2="405" stroke="#9eeaff" stroke-width="7"/><line x1="35" y1="535" x2="300" y2="535" stroke="#9eeaff" stroke-width="7"/><g fill="#0a2940" opacity=".65"><rect x="50" y="60" width="235" height="105"/><rect x="315" y="60" width="835" height="220"/><rect x="50" y="180" width="235" height="210"/><rect x="315" y="180" width="110" height="100"/><rect x="375" y="310" width="365" height="80"/><rect x="775" y="310" width="375" height="80"/><rect x="50" y="420" width="235" height="100"/><rect x="50" y="550" width="235" height="180"/><rect x="315" y="420" width="190" height="310"/><rect x="535" y="420" width="615" height="310"/></g><g stroke="#39d7ff" stroke-width="10" stroke-linecap="round"><line x1="620" y1="45" x2="735" y2="45"/><line x1="885" y1="45" x2="1000" y2="45"/><line x1="1165" y1="140" x2="1165" y2="235"/><line x1="35" y1="235" x2="35" y2="315"/><line x1="35" y1="600" x2="35" y2="680"/></g><g stroke="#ffc85b" stroke-width="5" fill="none"><path d="M150 45v60a60 60 0 0 1-60-60"/><path d="M300 210h60a60 60 0 0 1-60 60"/><path d="M455 295v-60a60 60 0 0 1 60 60"/><path d="M845 295v-60a60 60 0 0 1 60 60"/><path d="M300 505h60a60 60 0 0 1-60 60"/><path d="M760 485h60a60 60 0 0 1-60 60"/></g><g fill="#dff8ff" font-family="Arial" font-size="23" font-weight="700"><text x="85" y="125">FRONT ENTRY</text><text x="650" y="165" text-anchor="middle">LIVING ROOM</text><text x="115" y="285">KITCHEN</text><text x="330" y="235">BACK ENTRY</text><text x="545" y="355" text-anchor="middle">HALLWAY</text><text x="960" y="355" text-anchor="middle">BATHROOM</text><text x="105" y="480">LAUNDRY</text><text x="110" y="640">BASEMENT</text><text x="405" y="585" text-anchor="middle">STAIRS</text><text x="840" y="585" text-anchor="middle">BEDROOM</text></g><g stroke="#67dfff" stroke-width="3" opacity=".5"><line x1="350" y1="455" x2="350" y2="700"/><line x1="380" y1="455" x2="380" y2="700"/><line x1="410" y1="455" x2="410" y2="700"/><line x1="440" y1="455" x2="440" y2="700"/><line x1="470" y1="455" x2="470" y2="700"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" fill="none">
+<defs>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" stroke="#5abde5" stroke-width="1" opacity=".09"/></pattern>
+  <pattern id="grass" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M5 27l5-8m10 10l3-10m7 5l-4-7" stroke="#6b956f" stroke-width="1.4" opacity=".22"/></pattern>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity=".35"/></filter>
+</defs>
+<rect width="1400" height="900" fill="#07131d"/>
+<rect x="18" y="18" width="1364" height="864" rx="28" fill="#193826" stroke="#4f8c68" stroke-width="3"/>
+<rect x="18" y="18" width="1364" height="864" rx="28" fill="url(#grass)"/>
+<rect width="1400" height="900" fill="url(#grid)"/>
+
+<!-- street / curb / driveway -->
+<rect x="0" y="0" width="1400" height="82" fill="#202c35"/>
+<line x1="0" y1="65" x2="1400" y2="65" stroke="#d5dde3" stroke-width="4" stroke-dasharray="42 28" opacity=".55"/>
+<rect x="1015" y="82" width="325" height="315" rx="8" fill="#68727a" opacity=".9"/>
+<path d="M1178 397v178" stroke="#69747b" stroke-width="120" opacity=".85"/>
+<text x="1175" y="118" fill="#b9c6cf" font-size="18" font-family="Arial" text-anchor="middle" letter-spacing="3">DRIVEWAY</text>
+
+<!-- walkway -->
+<path d="M540 82v105" stroke="#b9b5a8" stroke-width="58"/>
+<path d="M540 187h-45" stroke="#b9b5a8" stroke-width="58"/>
+
+<!-- landscaping -->
+<g fill="#2f6d43" stroke="#6aa77a" stroke-width="3" opacity=".95">
+  <circle cx="130" cy="175" r="46"/><circle cx="1225" cy="705" r="58"/><circle cx="170" cy="745" r="52"/><circle cx="1260" cy="505" r="42"/>
+</g>
+<g fill="#426f4e" opacity=".95"><circle cx="430" cy="120" r="18"/><circle cx="465" cy="120" r="18"/><circle cx="610" cy="120" r="18"/><circle cx="650" cy="120" r="18"/></g>
+
+<!-- patio -->
+<rect x="845" y="710" width="300" height="125" rx="10" fill="#817d73" stroke="#c3bbb0" stroke-width="3"/>
+<g stroke="#a8a197" opacity=".5"><path d="M870 710v125M910 710v125M950 710v125M990 710v125M1030 710v125M1070 710v125M1110 710v125"/></g>
+<text x="995" y="805" fill="#d7d0c6" font-size="18" font-family="Arial" text-anchor="middle">PATIO</text>
+
+<!-- house shell -->
+<g filter="url(#shadow)">
+  <rect x="320" y="150" width="835" height="610" rx="8" fill="#dce5e9" stroke="#f5fbff" stroke-width="10"/>
+  <!-- interior fills -->
+  <rect x="335" y="165" width="190" height="105" fill="#e9eef1"/>
+  <rect x="545" y="165" width="590" height="245" fill="#e3eaee"/>
+  <rect x="335" y="290" width="190" height="220" fill="#e6ecef"/>
+  <rect x="545" y="425" width="135" height="95" fill="#e7edf0"/>
+  <rect x="695" y="425" width="225" height="95" fill="#e4ebef"/>
+  <rect x="935" y="425" width="200" height="95" fill="#e8edef"/>
+  <rect x="335" y="525" width="190" height="100" fill="#e4ebee"/>
+  <rect x="335" y="640" width="190" height="105" fill="#dfe7ea"/>
+  <rect x="545" y="535" width="135" height="210" fill="#e1e8ec"/>
+  <rect x="695" y="535" width="440" height="210" fill="#e6ecef"/>
+
+  <!-- walls -->
+  <g stroke="#203743" stroke-width="9" stroke-linecap="square">
+    <line x1="535" y1="150" x2="535" y2="760"/>
+    <line x1="320" y1="280" x2="535" y2="280"/>
+    <line x1="535" y1="415" x2="1155" y2="415"/>
+    <line x1="685" y1="415" x2="685" y2="760"/>
+    <line x1="925" y1="415" x2="925" y2="525"/>
+    <line x1="320" y1="520" x2="1155" y2="520"/>
+    <line x1="320" y1="635" x2="535" y2="635"/>
+  </g>
+
+  <!-- windows -->
+  <g stroke="#38bde9" stroke-width="11" stroke-linecap="round">
+    <line x1="680" y1="150" x2="780" y2="150"/><line x1="900" y1="150" x2="1005" y2="150"/>
+    <line x1="1155" y1="225" x2="1155" y2="315"/><line x1="1155" y1="600" x2="1155" y2="685"/>
+    <line x1="320" y1="350" x2="320" y2="430"/><line x1="770" y1="760" x2="865" y2="760"/><line x1="955" y1="760" x2="1050" y2="760"/>
+  </g>
+
+  <!-- doors and arcs -->
+  <g stroke="#d89c3b" stroke-width="5" fill="none">
+    <path d="M455 150v72a72 72 0 0 0 72-72"/>
+    <path d="M535 330h65a65 65 0 0 0-65 65"/>
+    <path d="M615 415v-62a62 62 0 0 1 62 62"/>
+    <path d="M790 415v-62a62 62 0 0 1 62 62"/>
+    <path d="M1020 415v-62a62 62 0 0 1 62 62"/>
+    <path d="M535 565h62a62 62 0 0 1-62 62"/>
+    <path d="M685 575h62a62 62 0 0 1-62 62"/>
+    <path d="M925 575h62a62 62 0 0 1-62 62"/>
+    <path d="M910 760v-70a70 70 0 0 0 70 70"/>
+  </g>
+
+  <!-- furniture / fixtures -->
+  <g stroke="#81939d" stroke-width="3" fill="#cbd5da">
+    <!-- living -->
+    <rect x="735" y="245" width="245" height="78" rx="16"/><rect x="780" y="335" width="150" height="48" rx="8"/><rect x="1025" y="210" width="62" height="125" rx="5"/>
+    <!-- kitchen -->
+    <rect x="350" y="315" width="150" height="42"/><rect x="350" y="380" width="60" height="105"/><rect x="435" y="380" width="65" height="105"/>
+    <circle cx="380" cy="335" r="13" fill="#8ebbc9"/><circle cx="470" cy="430" r="22" fill="#8ebbc9"/>
+    <!-- hall console --> <rect x="735" y="455" width="110" height="28" rx="3"/>
+    <!-- bath -->
+    <rect x="960" y="445" width="135" height="48" rx="22"/><ellipse cx="1100" cy="485" rx="22" ry="28"/>
+    <!-- laundry -->
+    <circle cx="382" cy="570" r="35"/><circle cx="466" cy="570" r="35"/>
+    <!-- utility -->
+    <circle cx="390" cy="690" r="35"/><rect x="440" y="660" width="55" height="70" rx="8"/>
+    <!-- bedroom -->
+    <rect x="810" y="585" width="220" height="120" rx="10"/><rect x="835" y="595" width="80" height="35" rx="10"/><rect x="925" y="595" width="80" height="35" rx="10"/><rect x="1050" y="575" width="55" height="65" rx="5"/>
+  </g>
+
+  <!-- stairs -->
+  <g stroke="#6f858f" stroke-width="3"><line x1="570" y1="555" x2="650" y2="555"/><line x1="570" y1="580" x2="650" y2="580"/><line x1="570" y1="605" x2="650" y2="605"/><line x1="570" y1="630" x2="650" y2="630"/><line x1="570" y1="655" x2="650" y2="655"/><line x1="570" y1="680" x2="650" y2="680"/><line x1="570" y1="705" x2="650" y2="705"/></g>
+</g>
+
+<!-- labels -->
+<g fill="#1c3541" font-family="Arial" font-size="18" font-weight="700" letter-spacing="1">
+  <text x="430" y="205" text-anchor="middle">FRONT ENTRY</text>
+  <text x="835" y="205" text-anchor="middle">LIVING ROOM</text>
+  <text x="430" y="330" text-anchor="middle">KITCHEN</text>
+  <text x="610" y="458" text-anchor="middle">BACK ENTRY</text>
+  <text x="805" y="458" text-anchor="middle">HALLWAY</text>
+  <text x="1030" y="458" text-anchor="middle">BATHROOM</text>
+  <text x="430" y="555" text-anchor="middle">LAUNDRY</text>
+  <text x="430" y="675" text-anchor="middle">UTILITY</text>
+  <text x="610" y="575" text-anchor="middle">STAIRS</text>
+  <text x="915" y="565" text-anchor="middle">BEDROOM</text>
+</g>
+
+<!-- property labels -->
+<g fill="#b8d8c0" font-family="Arial" font-size="16" font-weight="700" letter-spacing="2" opacity=".8">
+  <text x="700" y="118" text-anchor="middle">FRONT YARD</text>
+  <text x="120" y="470" text-anchor="middle" transform="rotate(-90 120 470)">LEFT SIDE YARD</text>
+  <text x="1295" y="540" text-anchor="middle" transform="rotate(90 1295 540)">RIGHT SIDE YARD</text>
+  <text x="650" y="858" text-anchor="middle">BACKYARD</text>
+</g>
+
+<!-- risk source symbols -->
+<g font-family="Arial" font-size="18" font-weight="700">
+  <circle cx="375" cy="335" r="14" fill="#ff6f5e"/><text x="375" y="341" fill="white" text-anchor="middle">F</text>
+  <circle cx="390" cy="690" r="14" fill="#36bfff"/><text x="390" y="696" fill="white" text-anchor="middle">W</text>
+  <circle cx="466" cy="570" r="14" fill="#36bfff"/><text x="466" y="576" fill="white" text-anchor="middle">W</text>
+  <circle cx="610" cy="620" r="14" fill="#c783ff"/><text x="610" y="626" fill="white" text-anchor="middle">!</text>
+</g>
+
+<text x="42" y="862" fill="#8fb5c6" font-family="Arial" font-size="13" letter-spacing="2">PROPERTY PLAN • LEVEL 01 • CLICK HIGHLIGHTED ZONES TO ENTER INSTALLATION VIEW</text>
+</svg>
