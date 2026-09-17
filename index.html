@@ -29,14 +29,8 @@
         <p><b>Property:</b> detached home, driveway, backyard, patio and basement utility area</p>
         <p><b>Main risks:</b> intrusion, fire, water damage, carbon monoxide and falls</p>
       </div>
-
-      <div class="mission-tip">
-        <b>Your job:</b> inspect the property, enter rooms, and mount protection devices where you think they should go. The emergency is unknown until you run the scenario.
-      </div>
-
-      <div class="shop-heading">
-        <div><h3>DEVICE LOADOUT</h3><span>Select a device before entering or while inside a room.</span></div>
-      </div>
+      <div class="mission-tip"><b>Your job:</b> inspect the property, enter rooms, and mount protection devices where you think they should go. The emergency is unknown until you run the scenario.</div>
+      <div class="shop-heading"><div><h3>DEVICE LOADOUT</h3><span>Select a device before entering or while inside a room.</span></div></div>
       <div id="deviceShop" class="device-shop"></div>
     </aside>
 
@@ -69,14 +63,12 @@
 
         <div id="blueprint" class="blueprint">
           <img src="assets/blueprints/house-01.svg" alt="Detailed property and house security blueprint" />
-
           <button class="zone exterior front-yard" data-zone="Front Yard" data-type="exterior" type="button"><span>Front Yard</span><b class="zone-count"></b></button>
           <button class="zone exterior driveway" data-zone="Driveway" data-type="exterior" type="button"><span>Driveway</span><b class="zone-count"></b></button>
           <button class="zone exterior left-yard" data-zone="Left Side Yard" data-type="exterior" type="button"><span>Left Side</span><b class="zone-count"></b></button>
           <button class="zone exterior right-yard" data-zone="Right Side Yard" data-type="exterior" type="button"><span>Right Side</span><b class="zone-count"></b></button>
           <button class="zone exterior backyard" data-zone="Backyard" data-type="exterior" type="button"><span>Backyard</span><b class="zone-count"></b></button>
           <button class="zone exterior patio" data-zone="Patio" data-type="exterior" type="button"><span>Patio</span><b class="zone-count"></b></button>
-
           <button class="zone interior front-entry" data-zone="Front Entry" data-type="entry" type="button"><span>Front Entry</span><b class="zone-count"></b></button>
           <button class="zone interior living" data-zone="Living Room" data-type="window" type="button"><span>Living Room</span><b class="zone-count"></b></button>
           <button class="zone interior kitchen" data-zone="Kitchen" data-type="wet" type="button"><span>Kitchen</span><b class="zone-count"></b></button>
@@ -88,7 +80,6 @@
           <button class="zone interior utility" data-zone="Basement Utility" data-type="utility" type="button"><span>Utility</span><b class="zone-count"></b></button>
           <button class="zone interior back-entry" data-zone="Back Entry" data-type="entry" type="button"><span>Back Entry</span><b class="zone-count"></b></button>
         </div>
-
         <div id="placementMessage" class="placement-message">Click any highlighted area to enter it and mount equipment.</div>
       </section>
     </section>
@@ -98,7 +89,6 @@
       <h2>Scenario Feed</h2>
       <video id="scenarioVideo" controls playsinline></video>
       <div id="videoPlaceholder" class="video-placeholder">Scenario footage will appear here when cinematic clips are added.</div>
-
       <div class="result">
         <h3 id="resultTitle">SYSTEM NOT TESTED</h3>
         <p id="resultText">Inspect the property, build your system and run the scenario.</p>
@@ -109,7 +99,6 @@
           <div><span>EST. DAMAGE</span><strong id="damage">—</strong></div>
         </div>
       </div>
-
       <div class="coverage-guide">
         <h3>DESIGN HINTS</h3>
         <p><b>Outside:</b> cameras need a view of approaches, driveways, doors, windows or the backyard.</p>
@@ -138,6 +127,8 @@
         <div><span>Room devices</span><strong id="roomDeviceCount">0</strong></div>
         <div><span>Mounting guide</span><strong id="mountGuide">Choose a device</strong></div>
       </div>
+
+      <div id="roomDeviceShop" class="room-device-shop" aria-label="Room installation device selector"></div>
 
       <div id="roomScene" class="room-scene" tabindex="0" aria-label="Interactive installation view">
         <div class="scene-ceiling"></div>
