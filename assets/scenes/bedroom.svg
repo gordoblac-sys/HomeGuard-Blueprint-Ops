@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect width="1280" height="435" fill="#f0ece7"/>
+<rect y="435" width="1280" height="285" fill="#8e7159"/>
+
+<!-- window -->
+<rect x="90" y="90" width="285" height="220" rx="12"
+fill="#d5edf7" stroke="#b9d1db" stroke-width="8"/>
+<line x1="232" y1="95" x2="232" y2="305"
+stroke="#b9d1db" stroke-width="5"/>
+
+<!-- bed -->
+<rect x="310" y="280" width="470" height="300" rx="22"
+fill="#baa092"/>
+<rect x="340" y="300" width="410" height="105" rx="15"
+fill="#f3f6f8"/>
+<rect x="340" y="410" width="410" height="145" rx="14"
+fill="#6e92b0"/>
+
+<!-- nightstands -->
+<rect x="230" y="390" width="65" height="115" rx="8"
+fill="#ae9586"/>
+<rect x="795" y="390" width="65" height="115" rx="8"
+fill="#ae9586"/>
+
+<!-- dresser -->
+<rect x="995" y="220" width="185" height="290" rx="12"
+fill="#d5c8bc"/>
+<line x1="1010" y1="290" x2="1165" y2="290"
+stroke="#ae9586" stroke-width="4"/>
+<line x1="1010" y1="365" x2="1165" y2="365"
+stroke="#ae9586" stroke-width="4"/>
+
+<!-- bedside lamp -->
+<rect x="248" y="300" width="18" height="90" fill="#77665b"/>
+<path d="M220 305h75l-18-56h-40z" fill="#eee4d5"/>
+
+<text x="100" y="675" font-size="27" font-family="Arial"
+fill="#463b34" font-weight="700">
+WINDOW INTRUSION • CO PROTECTION • SENIOR / MEDICAL SAFETY
+</text>
+</svg>

@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#102b48"/>
+<stop offset="1" stop-color="#071523"/>
+</linearGradient>
+<pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+<path d="M22 0H0V22" fill="none" stroke="#1d4b72" stroke-width="1"/>
+</pattern>
+</defs>
+
+<rect width="1400" height="900" fill="url(#bg)"/>
+<rect width="1400" height="900" fill="url(#grid)" opacity=".65"/>
+
+<rect x="35" y="35" width="1330" height="830" rx="28"
+fill="none" stroke="#55d7ff" stroke-width="4"/>
+
+<!-- FRONT YARD -->
+<rect x="55" y="70" width="260" height="260" rx="20"
+fill="#0d2e39" stroke="#36b985" stroke-width="3"/>
+<path d="M95 300 Q180 230 275 300" fill="none"
+stroke="#63c985" stroke-width="18" opacity=".5"/>
+
+<!-- DRIVEWAY -->
+<rect x="335" y="55" width="185" height="305" rx="14"
+fill="#303c49" stroke="#b3c6d5" stroke-width="3"/>
+<path d="M365 70L490 70L475 350L380 350Z"
+fill="#475562"/>
+
+<!-- HOUSE -->
+<rect x="540" y="75" width="625" height="665"
+fill="#0a1b2c" stroke="#d4f6ff" stroke-width="9"/>
+
+<!-- ROOM DIVISIONS -->
+<line x1="540" y1="245" x2="1165" y2="245"
+stroke="#d4f6ff" stroke-width="7"/>
+<line x1="540" y1="475" x2="1165" y2="475"
+stroke="#d4f6ff" stroke-width="7"/>
+<line x1="720" y1="75" x2="720" y2="475"
+stroke="#d4f6ff" stroke-width="7"/>
+<line x1="900" y1="75" x2="900" y2="475"
+stroke="#d4f6ff" stroke-width="7"/>
+<line x1="1045" y1="75" x2="1045" y2="740"
+stroke="#d4f6ff" stroke-width="7"/>
+
+<line x1="540" y1="600" x2="720" y2="600"
+stroke="#d4f6ff" stroke-width="7"/>
+<line x1="720" y1="475" x2="720" y2="740"
+stroke="#d4f6ff" stroke-width="7"/>
+<line x1="900" y1="475" x2="900" y2="740"
+stroke="#d4f6ff" stroke-width="7"/>
+
+<!-- FRONT DOOR -->
+<path d="M745 75v65" stroke="#ffd166"
+stroke-width="12" stroke-linecap="round"/>
+<path d="M745 140A65 65 0 0 0 810 75"
+fill="none" stroke="#ffd166" stroke-width="4"/>
+
+<!-- BACK DOOR -->
+<path d="M930 475h65" stroke="#ffd166"
+stroke-width="12" stroke-linecap="round"/>
+<path d="M995 475A65 65 0 0 1 930 540"
+fill="none" stroke="#ffd166" stroke-width="4"/>
+
+<!-- WINDOWS -->
+<g stroke="#67dcff" stroke-width="8">
+<line x1="580" y1="75" x2="665" y2="75"/>
+<line x1="935" y1="75" x2="1015" y2="75"/>
+<line x1="1165" y1="145" x2="1165" y2="220"/>
+<line x1="1165" y1="340" x2="1165" y2="420"/>
+<line x1="585" y1="740" x2="670" y2="740"/>
+<line x1="770" y1="740" x2="855" y2="740"/>
+</g>
+
+<!-- KITCHEN CABINETS / COUNTERS -->
+<g stroke="#8bd8ff" stroke-width="3" fill="none">
+<rect x="555" y="282" width="130" height="165" rx="9"/>
+<rect x="555" y="282" width="130" height="35"/>
+<rect x="570" y="330" width="46" height="46"/>
+<rect x="625" y="330" width="46" height="46"/>
+<rect x="575" y="390" width="90" height="40" rx="5"/>
+</g>
+
+<!-- LIVING ROOM -->
+<g stroke="#8bd8ff" stroke-width="3" fill="none">
+<rect x="925" y="120" width="105" height="55" rx="12"/>
+<rect x="935" y="190" width="80" height="45" rx="9"/>
+<rect x="1070" y="130" width="55" height="100" rx="9"/>
+</g>
+
+<!-- LAUNDRY -->
+<g stroke="#8bd8ff" stroke-width="3" fill="none">
+<circle cx="585" cy="535" r="38"/>
+<circle cx="665" cy="535" r="38"/>
+<rect x="550" y="580" width="150" height="55" rx="7"/>
+</g>
+
+<!-- STAIRS -->
+<path d="M740 505h40v30h-40v30h60v30h-60v30h80v30h-80v30h100"
+fill="none" stroke="#8bd8ff" stroke-width="4"/>
+
+<!-- BATHROOM -->
+<g stroke="#8bd8ff" stroke-width="3" fill="none">
+<rect x="925" y="505" width="75" height="80" rx="10"/>
+<ellipse cx="965" cy="625" rx="35" ry="18"/>
+</g>
+
+<!-- BED -->
+<g stroke="#8bd8ff" stroke-width="3" fill="none">
+<rect x="1060" y="515" width="80" height="160" rx="12"/>
+<rect x="1072" y="525" width="56" height="66" rx="8"/>
+</g>
+
+<!-- UTILITY -->
+<g stroke="#8bd8ff" stroke-width="3" fill="none">
+<rect x="925" y="645" width="55" height="80" rx="10"/>
+<rect x="990" y="645" width="43" height="80" rx="8"/>
+<path d="M945 645v-35h20v35"/>
+</g>
+
+<!-- RIGHT SIDE -->
+<rect x="1185" y="90" width="150" height="630" rx="20"
+fill="#0d2e39" stroke="#36b985" stroke-width="3"/>
+
+<!-- BACKYARD -->
+<rect x="320" y="765" width="840" height="75" rx="22"
+fill="#0d2e39" stroke="#36b985" stroke-width="3"/>
+
+<!-- PATIO -->
+<rect x="725" y="650" width="160" height="75" rx="8"
+fill="#314d63" stroke="#76ddff" stroke-width="3"/>
+
+<g font-family="Arial" fill="#e8f8ff" font-weight="700">
+<text x="85" y="115" font-size="28">FRONT YARD</text>
+<text x="360" y="100" font-size="25">DRIVEWAY</text>
+<text x="585" y="135" font-size="23">FRONT ENTRY</text>
+<text x="935" y="135" font-size="24">LIVING ROOM</text>
+<text x="575" y="280" font-size="25">KITCHEN</text>
+<text x="760" y="285" font-size="21">HALLWAY</text>
+<text x="930" y="505" font-size="21">BATHROOM</text>
+<text x="1065" y="505" font-size="21">BEDROOM</text>
+<text x="565" y="505" font-size="21">LAUNDRY</text>
+<text x="750" y="505" font-size="21">STAIRS</text>
+<text x="920" y="630" font-size="18">UTILITY</text>
+<text x="745" y="690" font-size="20">PATIO</text>
+<text x="600" y="820" font-size="28">BACKYARD</text>
+<text x="1210" y="390" font-size="22"
+transform="rotate(90 1210 390)">RIGHT SIDE YARD</text>
+<text x="110" y="690" font-size="22"
+transform="rotate(-90 110 690)">LEFT SIDE YARD</text>
+</g>
+</svg>

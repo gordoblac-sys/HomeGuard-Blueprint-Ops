@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect width="1280" height="425" fill="#eee9e2"/>
+<rect y="425" width="1280" height="295" fill="#94775e"/>
+
+<path d="
+M145 585
+H285 V530
+H405 V475
+H525 V420
+H645 V365
+H765 V310
+H885 V585
+Z"
+fill="#806954"/>
+
+<g stroke="#dbc7b3" stroke-width="5">
+<line x1="145" y1="585" x2="885" y2="585"/>
+<line x1="285" y1="530" x2="885" y2="530"/>
+<line x1="405" y1="475" x2="885" y2="475"/>
+<line x1="525" y1="420" x2="885" y2="420"/>
+<line x1="645" y1="365" x2="885" y2="365"/>
+<line x1="765" y1="310" x2="885" y2="310"/>
+</g>
+
+<!-- rail -->
+<path d="M145 200H900"
+stroke="#6c5947" stroke-width="12"
+stroke-linecap="round"/>
+<line x1="155" y1="200" x2="155" y2="580"
+stroke="#6c5947" stroke-width="12"/>
+<line x1="900" y1="200" x2="900" y2="310"
+stroke="#6c5947" stroke-width="12"/>
+
+<!-- fall danger path -->
+<path d="M150 620
+Q300 500 450 535
+T745 530
+T1070 620"
+fill="none" stroke="#ef6174"
+stroke-width="12" stroke-dasharray="18 12" opacity=".55"/>
+
+<text x="150" y="680" font-size="27" font-family="Arial"
+fill="#4c3f35" font-weight="700">
+HIGH FALL-RISK AREA • LANDING • HANDRAIL • MEDICAL COVERAGE
+</text>
+</svg>

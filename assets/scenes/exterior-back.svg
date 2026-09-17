@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect width="1280" height="320" fill="#bee4fb"/>
+<rect y="320" width="1280" height="400" fill="#80b35e"/>
+
+<rect x="170" y="205" width="940" height="310"
+fill="#e9e1d5" stroke="#b8a087" stroke-width="7"/>
+<polygon points="135,230 640,75 1145,230"
+fill="#76553e"/>
+
+<rect x="300" y="280" width="175" height="175"
+fill="#d2edf7" stroke="#afcad5" stroke-width="7"/>
+<rect x="805" y="280" width="175" height="175"
+fill="#d2edf7" stroke="#afcad5" stroke-width="7"/>
+
+<rect x="560" y="290" width="160" height="225"
+fill="#86664d"/>
+
+<!-- patio -->
+<rect x="455" y="530" width="370" height="100"
+fill="#bcae9b"/>
+<rect x="510" y="550" width="85" height="55"
+fill="#826f5e"/>
+<rect x="680" y="550" width="85" height="55"
+fill="#826f5e"/>
+
+<circle cx="255" cy="235" r="15" fill="#69f0ae"/>
+<circle cx="1020" cy="235" r="15" fill="#69f0ae"/>
+
+<text x="100" y="675" font-size="27" font-family="Arial"
+fill="#284129" font-weight="700">
+PATIO • REAR DOOR • REAR WINDOWS • BACKYARD CAMERA COVERAGE
+</text>
+</svg>
