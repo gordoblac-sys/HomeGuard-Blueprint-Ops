@@ -106,6 +106,27 @@ if(photoViewer && !document.getElementById('photoRealModeBadge')){
   photoViewer.appendChild(badge);
 }
 
+// Fix 360 drag input. The first panorama version deliberately stopped several
+// mouse / pointer events from bubbling so the old flat-image installer would not
+// also react. Pannellum needs those drag events to reach its document handlers,
+// so allow drag-related events to bubble while continuing to block normal click
+// bubbling through the panorama surface.
+if(!window.__homeGuard360InputFix){
+  window.__homeGuard360InputFix = true;
+  const nativeStopPropagation = Event.prototype.stopPropagation;
+  const dragEventTypes = new Set([
+    'mousedown','mouseup','mousemove',
+    'pointerdown','pointerup','pointermove'
+  ]);
+
+  Event.prototype.stopPropagation = function(){
+    const target = this.target;
+    const insidePanorama = target && target.closest && target.closest('#panoramaSurface');
+    if(insidePanorama && dragEventTypes.has(this.type)) return;
+    return nativeStopPropagation.call(this);
+  };
+}
+
 // Load the true 360 installation layer after photo-real mode.
 if (!document.getElementById('homeGuard360Loader')) {
   const s = document.createElement('script');
