@@ -1,0 +1,134 @@
+/* HomeGuard 360 installation mode */
+
+#panoramaSurface{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  display:none;
+  background:#000;
+}
+
+.room-scene.panorama-active #panoramaSurface{
+  display:block;
+}
+
+.room-scene.panorama-active #sceneImage,
+.room-scene.panorama-active #mountedDevices,
+.room-scene.panorama-active #sceneCrosshair{
+  display:none !important;
+}
+
+.panorama-toolbar{
+  position:absolute;
+  top:14px;
+  right:14px;
+  z-index:30;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+  pointer-events:none;
+}
+
+.panorama-toolbar span{
+  padding:8px 11px;
+  border-radius:999px;
+  background:rgba(3,12,20,.80);
+  border:1px solid rgba(85,215,255,.40);
+  backdrop-filter:blur(8px);
+  color:#e7f8ff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.06em;
+}
+
+.panorama-toolbar button{
+  pointer-events:auto;
+  min-height:38px;
+  padding:0 12px;
+  border-radius:10px;
+  border:1px solid rgba(105,240,174,.55);
+  background:rgba(7,38,31,.9);
+  color:#dffff0;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.panorama-toolbar button:hover{
+  background:rgba(17,73,57,.96);
+}
+
+.hg-device-hotspot{
+  width:54px !important;
+  min-height:48px !important;
+  margin-left:-27px !important;
+  margin-top:-24px !important;
+  padding:5px 7px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:rgba(4,14,24,.92);
+  border:2px solid #69f0ae;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.42),
+    0 0 14px rgba(105,240,174,.25);
+  color:white;
+  cursor:pointer;
+  text-align:center;
+}
+
+.hg-device-hotspot .hg-hotspot-icon{
+  display:block;
+  font-size:19px;
+  line-height:1;
+}
+
+.hg-device-hotspot .hg-hotspot-name{
+  display:block;
+  margin-top:3px;
+  max-width:78px;
+  font-size:8px;
+  line-height:1.05;
+  color:#dfffee;
+  white-space:nowrap;
+}
+
+#panoramaStatus{
+  position:absolute;
+  left:16px;
+  top:16px;
+  z-index:30;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(4,14,24,.78);
+  border:1px solid rgba(105,240,174,.42);
+  color:#69f0ae;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.11em;
+  pointer-events:none;
+  backdrop-filter:blur(8px);
+}
+
+.pnlm-container{
+  background:#03070c !important;
+}
+
+.pnlm-load-box{
+  border-radius:14px !important;
+}
+
+@media(max-width:700px){
+  .panorama-toolbar{
+    left:12px;
+    right:12px;
+    justify-content:flex-end;
+  }
+
+  .panorama-toolbar span{
+    width:100%;
+    text-align:center;
+  }
+}

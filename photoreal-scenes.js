@@ -105,3 +105,11 @@ if(photoViewer && !document.getElementById('photoRealModeBadge')){
   badge.style.cssText = 'display:inline-block;margin-top:7px;padding:5px 9px;border-radius:999px;border:1px solid rgba(105,240,174,.42);background:rgba(11,47,38,.55);color:#69f0ae;font-size:9px;font-weight:900;letter-spacing:.12em';
   photoViewer.appendChild(badge);
 }
+
+// Load the true 360 installation layer after photo-real mode.
+if (!document.getElementById('homeGuard360Loader')) {
+  const s = document.createElement('script');
+  s.id = 'homeGuard360Loader';
+  s.src = 'panorama-upgrade.js';
+  document.body.appendChild(s);
+}
