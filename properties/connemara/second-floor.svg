@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Connemara Main House second-floor gameplay trace</title>
+  <desc id="desc">Interactive gameplay trace based on the National Park Service 2004 measured second-floor plan, report page 175. Mrs. Sandburg's Bedroom is marked as a verified same-house 360 capture. Geometry is simplified for gameplay and the official measured report remains the source of truth.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#d7dde2" stroke-width="1"/>
+    </pattern>
+    <style>
+      .wall{fill:none;stroke:#17222b;stroke-width:12;stroke-linejoin:miter}
+      .inner{fill:none;stroke:#27343e;stroke-width:6}
+      .thin{fill:none;stroke:#6d7a84;stroke-width:2}
+      .room{font:700 22px Arial,sans-serif;fill:#17222b;letter-spacing:.04em}
+      .sub{font:14px Arial,sans-serif;fill:#5b6872}
+      .cap{font:700 14px Arial,sans-serif;fill:#0a563d}
+      .small{font:12px Arial,sans-serif;fill:#68747d}
+      .marker{fill:#16a36f;stroke:#fff;stroke-width:5}
+      .markerRing{fill:none;stroke:#16a36f;stroke-width:3}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f7f7f2"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".45"/>
+
+  <text x="55" y="48" class="room">CONNEMARA MAIN HOUSE - SECOND FLOOR</text>
+  <text x="55" y="73" class="sub">Interactive trace from NPS 2004 measured plan • official report page 175 • not to scale</text>
+
+  <path class="wall" d="M150 155 H1000 V610 H150 Z"/>
+  <path class="inner" d="M435 155 V610"/>
+  <path class="inner" d="M705 155 V610"/>
+  <path class="inner" d="M150 380 H1000"/>
+  <path class="inner" d="M570 380 V610"/>
+  <path class="inner" d="M850 380 V610"/>
+
+  <path class="thin" d="M435 260 h40 a40 40 0 0 0-40 40 M705 250 h-40 a40 40 0 0 1 40 40 M570 455 h40 a40 40 0 0 0-40 40 M850 465 h-40 a40 40 0 0 1 40 40"/>
+  <path class="thin" d="M205 155 h90 M330 155 h60 M760 155 h90 M890 155 h65 M160 430 v95 M990 430 v95 M275 610 h95 M745 610 h90" stroke-width="8"/>
+
+  <text x="235" y="255" class="room">MRS. SANDBURG'S</text>
+  <text x="275" y="285" class="room">BEDROOM</text>
+  <text x="240" y="315" class="sub">Verified NPS 360 capture</text>
+
+  <text x="520" y="255" class="room">UPPER HALL</text>
+  <text x="548" y="285" class="sub">Second-floor circulation</text>
+
+  <text x="782" y="255" class="room">BEDROOM / STUDY</text>
+  <text x="808" y="285" class="sub">Historic second-floor room</text>
+
+  <text x="245" y="495" class="room">GUEST ROOM</text>
+  <text x="230" y="525" class="sub">Same-house panorama exists</text>
+
+  <text x="610" y="495" class="room">STAIR / HALL</text>
+  <text x="620" y="525" class="sub">Vertical circulation</text>
+
+  <text x="875" y="495" class="room">OTHER BEDROOM</text>
+  <text x="887" y="525" class="sub">Historic room</text>
+
+  <circle cx="300" cy="345" r="26" class="markerRing"/><circle cx="300" cy="345" r="13" class="marker"/>
+  <text x="330" y="351" class="cap">360</text>
+
+  <text x="55" y="728" class="small">Source of truth: Connemara Main House Historic Structure Report, 2004 measured plan. This local trace is used only so the in-game blueprint always loads and stays matched to the verified same-house 360 scenes.</text>
+</svg>
