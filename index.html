@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>HomeGuard: Blueprint Ops</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="graphics-upgrade.css" />
 </head>
 <body>
   <header class="topbar">
@@ -29,9 +30,20 @@
         <p><b>Property:</b> detached home, driveway, backyard, patio and basement utility area</p>
         <p><b>Main risks:</b> intrusion, fire, water damage, carbon monoxide and falls</p>
       </div>
-      <div class="mission-tip"><b>Your job:</b> inspect the property, enter rooms, and mount protection devices where you think they should go. The emergency is unknown until you run the scenario.</div>
-      <div class="shop-heading"><div><h3>DEVICE LOADOUT</h3><span>Select a device before entering or while inside a room.</span></div></div>
+      <div class="mission-tip"><b>Your job:</b> inspect the property, enter rooms, and mount protection devices where they make the most sense. The emergency is unknown until you run the scenario.</div>
+
+      <div class="shop-heading">
+        <div>
+          <h3>ACTIVE LOADOUT</h3>
+          <span>Select a device before entering or while inside a room.</span>
+        </div>
+      </div>
       <div id="deviceShop" class="device-shop"></div>
+
+      <details class="catalog-wrap" open>
+        <summary>FULL EQUIPMENT CATALOG</summary>
+        <div id="catalog" class="catalog-grid"></div>
+      </details>
     </aside>
 
     <section class="game-column">
@@ -46,7 +58,7 @@
           <div>
             <p class="eyebrow">PROPERTY PLANNING PHASE</p>
             <h2>Interactive Security Blueprint</h2>
-            <p class="blueprint-help"><b>Click a room or exterior area to enter it.</b> The blueprint is now your navigation map. Devices are mounted from the detailed room view.</p>
+            <p class="blueprint-help"><b>Click a room or exterior area to enter it.</b> The blueprint is your navigation map. Devices are mounted from the detailed room view.</p>
           </div>
           <div class="actions">
             <button id="resetBtn" class="secondary" type="button">RESET SYSTEM</button>
@@ -59,10 +71,11 @@
           <span><i class="risk water"></i> Water risk</span>
           <span><i class="risk fire"></i> Fire / CO risk</span>
           <span><i class="risk medical"></i> Fall risk</span>
+          <span><i class="risk camera"></i> Exterior camera zone</span>
         </div>
 
         <div id="blueprint" class="blueprint">
-          <img src="assets/blueprints/house-01.svg" alt="Detailed property and house security blueprint" />
+          <img src="assets/blueprints/house-02.svg" alt="Detailed property and house security blueprint" />
           <button class="zone exterior front-yard" data-zone="Front Yard" data-type="exterior" type="button"><span>Front Yard</span><b class="zone-count"></b></button>
           <button class="zone exterior driveway" data-zone="Driveway" data-type="exterior" type="button"><span>Driveway</span><b class="zone-count"></b></button>
           <button class="zone exterior left-yard" data-zone="Left Side Yard" data-type="exterior" type="button"><span>Left Side</span><b class="zone-count"></b></button>
@@ -87,11 +100,12 @@
     <aside class="panel scenario-panel">
       <p class="eyebrow">LIVE EVENT</p>
       <h2>Scenario Feed</h2>
-      <video id="scenarioVideo" controls playsinline></video>
-      <div id="videoPlaceholder" class="video-placeholder">Scenario footage will appear here when cinematic clips are added.</div>
+      <video id="scenarioVideo" class="scenario-video" controls playsinline preload="metadata"></video>
+      <div id="videoPlaceholder" class="video-placeholder">Add room-based scenario videos in <b>assets/videos/</b> to play real break-ins, leaks, fires, CO events, and fall incidents.</div>
+
       <div class="result">
         <h3 id="resultTitle">SYSTEM NOT TESTED</h3>
-        <p id="resultText">Inspect the property, build your system and run the scenario.</p>
+        <p id="resultText">Inspect the property, build your system, and run the scenario.</p>
         <div class="result-grid">
           <div><span>EVENT</span><strong id="incident">—</strong></div>
           <div><span>LOCATION</span><strong id="location">—</strong></div>
@@ -99,12 +113,34 @@
           <div><span>EST. DAMAGE</span><strong id="damage">—</strong></div>
         </div>
       </div>
+
       <div class="coverage-guide">
         <h3>DESIGN HINTS</h3>
         <p><b>Outside:</b> cameras need a view of approaches, driveways, doors, windows or the backyard.</p>
         <p><b>Water:</b> leak sensors belong low near plumbing and appliances. A shutoff valve belongs near the main water supply.</p>
-        <p><b>Life safety:</b> think about where smoke, CO and fall emergencies could happen before spending the whole budget on burglary protection.</p>
+        <p><b>Life safety:</b> smoke, CO and fall protection should compete for budget with burglary protection.</p>
       </div>
+
+      <details class="video-guide" open>
+        <summary>VIDEO FILE NAMES</summary>
+        <ul>
+          <li><code>intrusion-front-entry.mp4</code></li>
+          <li><code>intrusion-back-entry.mp4</code></li>
+          <li><code>intrusion-living-room.mp4</code></li>
+          <li><code>fire-kitchen.mp4</code></li>
+          <li><code>fire-laundry.mp4</code></li>
+          <li><code>fire-basement-utility.mp4</code></li>
+          <li><code>water-kitchen.mp4</code></li>
+          <li><code>water-bathroom.mp4</code></li>
+          <li><code>water-laundry.mp4</code></li>
+          <li><code>water-basement-utility.mp4</code></li>
+          <li><code>fall-bathroom.mp4</code></li>
+          <li><code>fall-bedroom.mp4</code></li>
+          <li><code>fall-stairs.mp4</code></li>
+          <li><code>co-bedroom.mp4</code></li>
+          <li><code>co-basement-utility.mp4</code></li>
+        </ul>
+      </details>
     </aside>
   </main>
 
@@ -131,11 +167,7 @@
       <div id="roomDeviceShop" class="room-device-shop" aria-label="Room installation device selector"></div>
 
       <div id="roomScene" class="room-scene" tabindex="0" aria-label="Interactive installation view">
-        <div class="scene-ceiling"></div>
-        <div class="scene-wall scene-wall-left"></div>
-        <div class="scene-wall scene-wall-main"></div>
-        <div class="scene-floor"></div>
-        <div id="sceneFurniture" class="scene-furniture"></div>
+        <img id="sceneImage" class="scene-image" alt="Room scene" src="" />
         <div id="mountedDevices" class="mounted-devices"></div>
         <div class="scene-crosshair" id="sceneCrosshair"></div>
         <div class="scene-label" id="sceneLabel">ROOM VIEW</div>
@@ -147,5 +179,6 @@
 
   <script src="game.js"></script>
   <script src="equipment-prices.js"></script>
+  <script src="graphics-upgrade.js"></script>
 </body>
 </html>
