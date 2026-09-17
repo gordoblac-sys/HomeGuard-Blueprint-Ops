@@ -9,55 +9,88 @@
 <body>
   <header class="topbar">
     <div>
-      <p class="eyebrow">TACTICAL HOME SAFETY SIM</p>
+      <p class="eyebrow">TACTICAL HOME SAFETY SIMULATOR</p>
       <h1>HOMEGUARD: BLUEPRINT OPS</h1>
-      <p class="tagline">Design the system. Protect the home. Survive the scenario.</p>
+      <p class="tagline">Study the property. Design the system. Protect the people and the home.</p>
     </div>
-    <div class="budget-box"><span>BUDGET</span><strong id="budget">$1,200</strong></div>
+    <div class="budget-box">
+      <span>CUSTOMER EQUIPMENT BUDGET</span>
+      <strong id="budget">$1,600</strong>
+      <small>This is the money available to buy protection devices.</small>
+    </div>
   </header>
 
   <main class="layout">
-    <aside class="panel">
+    <aside class="panel loadout-panel">
       <p class="eyebrow">MISSION 01</p>
       <h2>Williams Residence</h2>
       <div class="brief">
-        <p><b>Residents:</b> 2 adults, 1 senior</p>
-        <p><b>Risks:</b> intrusion, fire, water, fall, CO</p>
-        <p><b>Objective:</b> protect the home without exceeding the budget.</p>
+        <p><b>Residents:</b> 2 adults and 1 senior</p>
+        <p><b>Property:</b> detached home with driveway, patio and basement utility area</p>
+        <p><b>Main risks:</b> break-in, fire, water damage, carbon monoxide and falls</p>
       </div>
-      <h3>DEVICE LOADOUT</h3>
+
+      <div class="mission-tip">
+        <b>Your job:</b> spend the customer's equipment budget wisely. Protect likely entry points, life-safety risks and water sources before running the emergency scenario.
+      </div>
+
+      <div class="shop-heading">
+        <h3>DEVICE LOADOUT</h3>
+        <span>Choose one, then click a valid zone</span>
+      </div>
       <div id="deviceShop" class="device-shop"></div>
     </aside>
 
     <section class="game-column">
       <div class="stats">
         <div><span>COVERAGE</span><strong id="coverage">0%</strong></div>
-        <div><span>DEVICES</span><strong id="deviceCount">0</strong></div>
-        <div><span>SELECTED</span><strong id="selected">None</strong></div>
+        <div><span>DEVICES INSTALLED</span><strong id="deviceCount">0</strong></div>
+        <div><span>SELECTED DEVICE</span><strong id="selected">None</strong></div>
       </div>
 
       <section class="blueprint-card">
         <div class="section-head">
-          <div><p class="eyebrow">PLANNING PHASE</p><h2>Interactive Blueprint</h2></div>
+          <div>
+            <p class="eyebrow">PROPERTY PLANNING PHASE</p>
+            <h2>Interactive Security Blueprint</h2>
+            <p class="blueprint-help">The green area is the property. Place exterior cameras around the outside of the house and interior devices in the rooms they protect.</p>
+          </div>
           <div class="actions">
-            <button id="resetBtn" class="secondary">RESET</button>
-            <button id="simulateBtn" class="primary">RUN SCENARIO</button>
+            <button id="resetBtn" class="secondary" type="button">RESET SYSTEM</button>
+            <button id="simulateBtn" class="primary" type="button">RUN SCENARIO</button>
           </div>
         </div>
 
-        <div id="blueprint" class="blueprint">
-          <img src="assets/blueprints/house-01.svg" alt="House blueprint" />
-          <button class="room front" data-room="Front Entry">Front Entry<div class="chips"></div></button>
-          <button class="room living" data-room="Living Room">Living Room<div class="chips"></div></button>
-          <button class="room kitchen" data-room="Kitchen">Kitchen<div class="chips"></div></button>
-          <button class="room hall" data-room="Hallway">Hallway<div class="chips"></div></button>
-          <button class="room bath" data-room="Bathroom">Bathroom<div class="chips"></div></button>
-          <button class="room bedroom" data-room="Bedroom">Bedroom<div class="chips"></div></button>
-          <button class="room stairs" data-room="Stairs">Stairs<div class="chips"></div></button>
-          <button class="room laundry" data-room="Laundry">Laundry<div class="chips"></div></button>
-          <button class="room basement" data-room="Basement">Basement<div class="chips"></div></button>
-          <button class="room back" data-room="Back Entry">Back Entry<div class="chips"></div></button>
+        <div class="risk-legend">
+          <span><i class="risk entry"></i> Entry risk</span>
+          <span><i class="risk water"></i> Water risk</span>
+          <span><i class="risk fire"></i> Fire/CO risk</span>
+          <span><i class="risk medical"></i> Fall risk</span>
         </div>
+
+        <div id="blueprint" class="blueprint">
+          <img src="assets/blueprints/house-01.svg" alt="Detailed property and house security blueprint" />
+
+          <button class="zone exterior front-yard" data-zone="Front Yard" data-type="exterior" type="button"><span>Front Yard</span><div class="chips"></div></button>
+          <button class="zone exterior driveway" data-zone="Driveway" data-type="exterior" type="button"><span>Driveway</span><div class="chips"></div></button>
+          <button class="zone exterior left-yard" data-zone="Left Side Yard" data-type="exterior" type="button"><span>Left Side</span><div class="chips"></div></button>
+          <button class="zone exterior right-yard" data-zone="Right Side Yard" data-type="exterior" type="button"><span>Right Side</span><div class="chips"></div></button>
+          <button class="zone exterior backyard" data-zone="Backyard" data-type="exterior" type="button"><span>Backyard</span><div class="chips"></div></button>
+          <button class="zone exterior patio" data-zone="Patio" data-type="exterior" type="button"><span>Patio</span><div class="chips"></div></button>
+
+          <button class="zone interior front-entry" data-zone="Front Entry" data-type="entry" type="button"><span>Front Entry</span><div class="chips"></div></button>
+          <button class="zone interior living" data-zone="Living Room" data-type="window" type="button"><span>Living Room</span><div class="chips"></div></button>
+          <button class="zone interior kitchen" data-zone="Kitchen" data-type="wet" type="button"><span>Kitchen</span><div class="chips"></div></button>
+          <button class="zone interior hall" data-zone="Hallway" data-type="interior" type="button"><span>Hallway</span><div class="chips"></div></button>
+          <button class="zone interior bath" data-zone="Bathroom" data-type="wet-medical" type="button"><span>Bathroom</span><div class="chips"></div></button>
+          <button class="zone interior bedroom" data-zone="Bedroom" data-type="medical" type="button"><span>Bedroom</span><div class="chips"></div></button>
+          <button class="zone interior stairs" data-zone="Stairs" data-type="medical" type="button"><span>Stairs</span><div class="chips"></div></button>
+          <button class="zone interior laundry" data-zone="Laundry" data-type="wet" type="button"><span>Laundry</span><div class="chips"></div></button>
+          <button class="zone interior utility" data-zone="Basement Utility" data-type="utility" type="button"><span>Basement Utility</span><div class="chips"></div></button>
+          <button class="zone interior back-entry" data-zone="Back Entry" data-type="entry" type="button"><span>Back Entry</span><div class="chips"></div></button>
+        </div>
+
+        <div id="placementMessage" class="placement-message">Select a device from the left, then click the area where you want it installed.</div>
       </section>
     </section>
 
@@ -65,16 +98,24 @@
       <p class="eyebrow">LIVE EVENT</p>
       <h2>Scenario Feed</h2>
       <video id="scenarioVideo" controls playsinline></video>
-      <div id="videoPlaceholder" class="video-placeholder">Scenario footage will appear here.</div>
+      <div id="videoPlaceholder" class="video-placeholder">Scenario footage will appear here when video assets are added.</div>
+
       <div class="result">
         <h3 id="resultTitle">SYSTEM NOT TESTED</h3>
-        <p id="resultText">Build your system and run the scenario.</p>
+        <p id="resultText">Build your protection plan and run the scenario.</p>
         <div class="result-grid">
           <div><span>EVENT</span><strong id="incident">—</strong></div>
           <div><span>LOCATION</span><strong id="location">—</strong></div>
           <div><span>DETECTED</span><strong id="detected">—</strong></div>
-          <div><span>DAMAGE</span><strong id="damage">—</strong></div>
+          <div><span>EST. DAMAGE</span><strong id="damage">—</strong></div>
         </div>
+      </div>
+
+      <div class="coverage-guide">
+        <h3>WHAT TO THINK ABOUT</h3>
+        <p><b>Outside:</b> cameras should watch approaches before someone reaches a door or window.</p>
+        <p><b>Water:</b> protect appliances and plumbing areas. A leak sensor detects the problem; a shutoff can reduce the damage.</p>
+        <p><b>Life safety:</b> smoke, CO and fall protection can be just as important as intrusion protection.</p>
       </div>
     </aside>
   </main>
